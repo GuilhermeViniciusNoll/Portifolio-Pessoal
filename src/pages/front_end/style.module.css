@@ -1,0 +1,145 @@
+.main {
+    height: calc(100vh - 100px);
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px 50px;
+}
+
+.main_title {
+    color: rgb(0, 0, 0);
+    font-family: Inknut Antiqua;
+    font-size: clamp(1.5rem, 8vw, 2.55rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.main_refer {
+    margin-top: 55px;
+    color: rgb(0, 0, 0);
+    font-family: Inknut Antiqua;
+    font-size: clamp(1rem, 8vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.main_refer>a {
+    text-decoration: none;
+    color: #005c89;
+}
+
+.main_contact {
+    margin-top: 35px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    max-width: 250px;
+    width: 100%;
+    height: 60px;
+    border-radius: 45px;
+    border: none;
+    font-size: 25px;
+    font-family: Inknut Antiqua;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.main_list {
+
+    list-style: none;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.main_project {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    min-height: 380px;
+    padding: 5px;
+    height: max-content;
+    border-top: 10px groove #033249;
+    border-right: 10px groove #033249;
+    border-bottom: 10px ridge #033249;
+    border-left: 10px ridge #033249;
+    border-radius: 15px;
+}
+
+.main_project>img {
+    max-width: 150px;
+    max-height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    image-rendering: optimizeQuality;
+}
+
+.main_project>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main_paragraph {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_paragraph>a {
+    font-family: Inknut Antiqua;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    max-width: 150px;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.main_text>h3 {
+    color: rgb(0, 0, 0);
+    font-family: Inknut Antiqua;
+    font-size: clamp(1rem, 10vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.main_text>p {
+    color: rgb(0, 0, 0);
+    font-family: Inknut Antiqua;
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+}

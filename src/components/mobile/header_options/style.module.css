@@ -1,0 +1,70 @@
+.header_menu {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-direction: column;
+    margin: 5px 5px 15px 5px;
+    cursor: pointer;
+}
+
+.header_menu__risk {
+    background-color: rgb(255, 255, 255);
+    width: 27px;
+    height: 4px;
+}
+
+.header_menu__section {
+    background-color: #17445a;
+    overflow-y: auto;
+    z-index: 6;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 5px;
+    gap: 50px;
+    padding: 0px 5px;
+}
+
+.header_menu__option {
+    color: #ffffff;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header_menu__close {
+    align-self: end;
+    margin-right: 20px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.header_menu__shadow {
+    background-color: #012f464f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100%;
+    z-index: 5;
+}

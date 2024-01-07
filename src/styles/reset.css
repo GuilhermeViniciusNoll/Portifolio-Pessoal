@@ -1,0 +1,39 @@
+*,
+html,
+body,
+div,
+span {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+#root {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00000000 #00000000;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 8px;
+    width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 9px;
+    background-color: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #003140;
+}

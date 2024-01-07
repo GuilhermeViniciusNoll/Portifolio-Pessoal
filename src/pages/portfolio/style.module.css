@@ -1,0 +1,58 @@
+.main {
+    height: calc(100% - 100px);
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px;
+    gap: 20px;
+}
+
+.main>button:first-child {
+    align-self: flex-start;
+}
+
+.main_title {
+
+    color: #000;
+    font-family: Inknut Antiqua;
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 60px;
+}
+
+.main>p {
+    color: #000;
+    font-family: Inknut Antiqua;
+    font-size: clamp(1rem, 1vw, 1.3rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 800px;
+}
+
+.main>span {
+    color: #000;
+    font-family: Inknut Antiqua;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 800px;
+}
+
+.main_button {
+    font-family: Inknut Antiqua;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
