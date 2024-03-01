@@ -1,77 +1,50 @@
-.main__about_me {
-    height: calc(100% - 100px);
-    width: 100%;
+.main {
+    height: 100%;
+    max-height: calc(100vh - 100px);
+    width: calc(100% - 200px);
+    position: absolute;
+    right: 0px;
     overflow-y: auto;
-    display: grid;
-    grid-template-rows: auto auto auto auto;
     padding: 0px 15px;
+    gap: 500px;
 }
 
-.main__div {
-    overflow: hidden;
-    min-height: 500px;
+@media (max-width: 700px) {
+    .main {
+        width: 100%;
+    }
+}
+
+/*  FIRST SECTION  */
+
+.first_section {
+    margin-top: 50px;
     width: 100%;
     height: max-content;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 10px;
-    grid-row-start: 2;
-}
-
-.main_section {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 35px;
-    height: max-content;
-    grid-row-start: 3;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.main_contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main_contact>button {
-    margin: 35px;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    max-width: 250px;
+.history_fragment {
     width: 100%;
-    height: 60px;
-    border-radius: 45px;
-    border: none;
-    font-size: 25px;
-    font-family: Inknut Antiqua;
-    line-height: 60px;
-    grid-row-start: 4;
-}
-
-.main_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: max-content;
-    margin: 15px;
-}
-
-.main_div__style {
-    width: 10px;
-    height: 500px;
-    max-height: 600px;
-    background-color: #000000;
-    align-self: center;
-    border-radius: 50px;
-}
-
-.main_container__title {
     max-width: 350px;
+    height: 100%;
+}
+
+.history_article {
     width: 100%;
-    color: rgb(0, 0, 0);
+    max-width: 350px;
+    height: min-content;
+}
+
+.history_title {
+    width: 100%;
+    max-width: 350px;
     font-family: Inknut Antiqua;
     font-size: clamp(1.2rem, 8vw, 2.55rem);
     font-style: normal;
@@ -80,22 +53,10 @@
     text-align: center;
 }
 
-.main_container__subtitle {
-    max-width: 100%;
-    width: 250px;
-    color: rgb(0, 0, 0);
-    font-family: Inknut Antiqua;
-    font-size: clamp(1.2rem, 8vw, 2rem);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-}
-
-.main_container__text {
-    max-width: 500px;
+.history_text {
     width: 100%;
-    color: rgb(0, 0, 0);
+    max-width: 350px;
+    height: min-content;
     font-family: Inknut Antiqua;
     font-size: clamp(0.8rem, 3vw, 1rem);
     font-style: normal;
@@ -104,9 +65,208 @@
     text-align: center;
 }
 
-@media (max-width: 1060px) {
-    .main_div__style {
+.fs_risk {
+    width: 10px;
+    height: 800px;
+    border-radius: 50px;
+}
+
+.about_fragment {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about_image {
+    position: relative;
+    left: 8%;
+}
+
+.about_article {
+    width: 100%;
+    max-width: 350px;
+    height: min-content;
+}
+
+.about_title {
+    width: 100%;
+    max-width: 350px;
+    font-family: Inknut Antiqua;
+    font-size: clamp(1.2rem, 8vw, 2.55rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.about_text {
+    width: 100%;
+    max-width: 350px;
+    height: min-content;
+    font-family: Inknut Antiqua;
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+@media (max-width: 994px) {
+
+    .first_section {
+        gap: 100px;
+    }
+
+    .fs_risk {
         width: 85%;
         height: 10px;
     }
+}
+
+/*  SECOND SECTION  */
+
+.second_section {
+    margin-top: 125px;
+}
+
+.know_fragment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.know_article {
+    width: 50%;
+}
+
+@media (max-width: 700px) {
+    .know_article {
+        width: 100%;
+    }
+}
+
+.know_title {
+    width: 100%;
+    height: max-content;
+    font-family: Inknut Antiqua;
+    font-size: clamp(1.5rem, 5vw, 2.55rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.know_text {
+    width: 100%;
+    height: min-content;
+    font-family: Inknut Antiqua;
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+/*  THIRD SECTION  */
+
+.third_section {
+    margin-top: 150px;
+}
+
+.technology_fragment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+}
+
+.technology_list {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.technology_item {
+    width: 90px;
+}
+
+.technology_image {
+    width: 100%;
+    height: 100%;
+}
+
+.technology_article{
+    width: 100%;
+    max-width: 350px;
+}
+
+.technology_title{
+    width: 100%;
+    max-width: 350px;
+    height: max-content;
+    font-family: Inknut Antiqua;
+    font-size: clamp(2rem, 10vw, 3rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.technology_text{
+    max-width: 350px;
+    width: 100%;
+    height: min-content;
+    font-family: Inknut Antiqua;
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+/*  FOUR SECTION  */
+
+.four_section {
+    margin: 90px 0px 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Inknut Antiqua;
+}
+
+.four_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    text-align: center;
+}
+
+.four_section>button {
+    margin: 35px;
+    color: rgb(255, 255, 255);
+    max-width: 300px;
+    width: 100%;
+    height: 60px;
+    border-radius: 45px;
+    border: none;
+    font-size: 25px;
+    font-family: Inknut Antiqua;
+    line-height: 60px;
 }

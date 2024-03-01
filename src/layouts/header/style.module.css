@@ -3,19 +3,17 @@
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 15px;
-    background-image: url("../../assets/background_nav.jpg");
-    background-size: 30%;
-    box-shadow: -1px 11px 9px 4px rgba(3, 50, 73, 1);
-    -webkit-box-shadow: -1px 11px 9px 4px rgba(3, 50, 73, 1);
-    -moz-box-shadow: -1px 11px 9px 4px rgba(3, 50, 73, 1);
+    justify-content: flex-end;
+    padding: 0px;
+
+    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 
 .header_container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
     width: 50%;
     height: 100%;
 }
@@ -26,29 +24,70 @@
     font-size: clamp(1.1rem, 13vw, 1.8rem);
     font-style: normal;
     font-weight: 400;
-    line-height: 50px;
+    line-height: 30px;
 }
 
 .header_description {
     color: #ffffff;
     font-family: "Inknut Antiqua", serif;
-    font-size: clamp(1rem, 13vw, 1.4rem);
+    font-size: clamp(0.5rem, 13vw, 1rem);
     font-style: normal;
     font-weight: 400;
-    line-height: 50px;
+    line-height: 30px;
 }
 
-@media (max-width: 705px) {
+.header_container_style{
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__sun{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+}
+
+@media (max-width: 700px) {
     .header {
         min-height: 100px;
         height: auto;
-        width: auto;
+        width: 100%;
         gap: 15px;
-        background-size: cover;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .header_container {
         width: auto;
     }
+    
+    .header_container_style{
+        width: 100%;
+        padding: 15px;
+        
+    }
+
+    .header__sun{
+        display: none;
+    }
 }
+
+@keyframes swing-in-top-fwd {
+    0% {
+      transform: rotateX(-100deg);
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }

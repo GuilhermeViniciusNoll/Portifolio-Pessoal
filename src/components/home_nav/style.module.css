@@ -1,25 +1,22 @@
 .main_nav {
-    background-image: url("../../assets/background_nav.jpg");
-    background-size: 50%;
     padding: 0px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    z-index: 2;
     width: 100%;
-    height: 20%;
-    border: ridge 2px white;
+    height: 18vh;
+    border: none;
+   
+    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
 .main_nav__option {
-    width: 24%;
+    width: 100%;
     display: flex;
     height: 100%;
-    display: grid;
-    grid-template-columns: 85% 10%;
-    grid-template-rows: 1fr;
     align-items: center;
+    justify-content: center;
     text-align: center;
     cursor: pointer;
 }
@@ -34,8 +31,8 @@
 
 .main_nav__text {
     color: #ffffff;
-    font-family: "Inknut Antiqua", serif;
-    font-size: 1.6rem;
+    font-family: 'Gruppo', sans-serif;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
@@ -43,7 +40,7 @@
 
 .main_nav__subinfo {
     color: #ffffff;
-    font-family: "Inknut Antiqua", serif;
+    font-family: 'Gruppo', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -51,35 +48,46 @@
 }
 
 .main_nav__clip {
+    max-width: 100px;
     width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
+    height: 101%;
     clip-path: polygon(15% 100%, 0% 100%, 85% 0%, 100% 0%);
 }
 
-@media (max-width: 700px) {
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 715px) {
+    .main_nav {
+        min-height: 100px;
+        }
+}
+
+@media (max-width: 715px) {
     .main_nav {
         flex-direction: column;
         height: auto;
-        padding-bottom: 50px;
-        background-size: cover;
+        padding-bottom: 100px;
     }
 
     .main_nav__option {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 30px;
-        height: auto;
-        margin-top: 30px;
-
-    }
-
-    .main_nav__paragraph {
-        height: auto;
+        min-height: 80px;
     }
 
     .main_nav__clip {
+        max-width: none;
         width: 100%;
         height: 5px;
         clip-path: none;

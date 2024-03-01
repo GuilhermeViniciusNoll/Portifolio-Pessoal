@@ -1,25 +1,25 @@
-import { useNavigate } from "react-router-dom"
 import { useGeneralContext } from "../../providers/general-context"
+import {FragmentTheme} from "./style.component.js"
 import style from "./style.module.css"
 
 export const Header_options__primary = () => {
 
     const { currentRender, setCurrentRender } = useGeneralContext()
-    const navigate = useNavigate()
-    const locals = ["Projetos BackEnd", "Projetos FrontEnd", "Sobre Mim", "Portfólio"]
+    const locals = ["Projetos BackEnd", "Projetos FrontEnd", "Sobre Mim"]
 
     const switchHeaderOptions = (current) => {
-        const list = locals.filter((element) => element != current)
+        /* const list = locals.filter((element) => element != current) */
         return (
             <>
-                {list.map((element) =>
-                    <div className={style.header_option} onClick={() => { setCurrentRender(element); navigate(`/${element}`) }}>
-                        <p className={style.header_optionText}>{element}</p>
-                        <div className={style.clip} />
-                    </div>
-                )
+                {locals.map((element) =>
+                    <>
+                        <div className={style.header_option} onClick={() => { setCurrentRender(element);}}>
+                            <p className={style.header_optionText}>{element}</p>
+                        </div>
+                        <div className={`clip ${style.clip}`} />
+                    </>)
                 }
-            </ >)
+            </>)
     }
 
     const renderComponent = () => {
@@ -38,12 +38,9 @@ export const Header_options__primary = () => {
     }
 
     return (
-        <nav className={style.header_containerSecond}>
-            <div className={style.header_optionUnique}>
-                <div className={style.clip} />
-                <div className={style.header_optionText} />
-            </div>
+        <FragmentTheme className={style.header_containerSecond}>
+            <div className={`clip ${style.clip}`} />
             {renderComponent()}
-        </nav>
+        </FragmentTheme>
     )
 }

@@ -1,40 +1,54 @@
 import { useGeneralContext } from "../../providers/general-context"
+import { FragmentTheme } from "./style.component"
 import img from "../../assets/icon_return.png"
-import github from "../../assets/github-sign.png"
-import email from "../../assets/email.png"
+import github from "../../assets/github.png"
+import email from "../../assets/e-mail.png"
 import linkedin from "../../assets/linkedin.png"
 import style from "./style.module.css"
-import { useNavigate } from "react-router-dom"
+import imgSung from "../../assets/sunCode.png"
 
 export const Modal_contact = () => {
 
     const { setModalContact } = useGeneralContext()
-    const navigate = useNavigate()
 
     return (
-        <div className={style.contact_modal}>
-            <div className={style.contact_modal__container}>
-                <img className={style.contact_modal__return} onClick={() => setModalContact(false)} src={img} />
-                <h1>Contatos</h1>
-                <ul className={style.contact_modal__list}>
-                    <li className={style.contact_modal__item}>
-                        <a href="https://github.com/GuilhermeViniciusNoll" target="_blank">
-                            <img className={style.contact_modal__logo} src={github} />
+        <FragmentTheme className={style.modal_fragment}>
+            <div className={style.modal}>
+                <div className={style.container_images}>
+                    <img className={style.contact_modal__return} onClick={() => setModalContact(false)} src={img} />
+                    <img className={style.imgSun} src={imgSung} alt="Sun code" />
+                </div>
+                <h1 className={style.title}>Contatos</h1>
+                <ul className={style.list}>
+                    <li className={style.item}>
+                        <a className={`containerColor`} href="https://github.com/GuilhermeViniciusNoll" target="_blank">
+                            <img src={github} />
                         </a>
-                        <span className={style.contact_modal__user}>GuilhermeViniciusNoll</span>
+                        <div className={style.container}>
+                            <p>GitHub</p>
+                            <span>GuilhermeViniciusNoll</span>
+                        </div>
                     </li>
-                    <li className={style.contact_modal__item}>
-                        <img className={style.contact_modal__logo} src={email} />
-                        <span className={style.contact_modal__user}>guilhermeVNbugs@outlook.com</span>
+                    <li className={style.item}>
+                        <div className={`containerColor`}>
+                            <img src={email} />
+                        </div>
+                        <div className={style.container}>
+                            <p>Email</p>
+                            <span>guilhermeVNbugs@outlook.com</span>
+                        </div>
                     </li>
-                    <li className={style.contact_modal__item}>
-                        <a href="https://www.linkedin.com/in/guilherme-bugs/" target="_blank">
-                            <img className={style.contact_modal__logo} src={linkedin} />
+                    <li className={style.item}>
+                        <a className={`containerColor`} href="https://www.linkedin.com/in/guilherme-bugs/" target="_blank">
+                            <img src={linkedin} />
                         </a>
-                        <span className={style.contact_modal__user}>Guilherme Bugs</span>
+                        <div className={style.container}>
+                            <p>Linkedin</p>
+                            <span>Guilherme Bugs</span>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div>
+        </FragmentTheme>
     )
 }

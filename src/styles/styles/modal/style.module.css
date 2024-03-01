@@ -1,0 +1,52 @@
+
+.modal__shadow {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    position: absolute;
+}
+
+.modal {
+    overflow-y: auto;
+    z-index: 12;
+    right: 0px;
+    top: 0px;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 5px;
+    gap: 80px;
+    padding: 0px 5px;
+}
+
+.modal__option {
+    color: #ffffff;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal__close {
+    align-self: end;
+    margin-right: 20px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.header__sun{
+    width: 150px
+}

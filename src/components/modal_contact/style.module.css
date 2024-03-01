@@ -1,5 +1,5 @@
-.contact_modal {
-    background-color: #012f464f;
+.modal_fragment {
+    background-color: rgba(0, 0, 0, 0.719);
     z-index: 5;
     position: fixed;
     top: 0%;
@@ -9,15 +9,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding:  25px 15px;
+    overflow-y: auto;
 }
 
-.contact_modal__container {
+.modal {
     width: 100%;
-    height: 100%;
+    height: min-content;
     max-width: 500px;
-    max-height: 450px;
-    background-color: #17445a;
     overflow-y: auto;
     border-radius: 5px;
     display: flex;
@@ -26,43 +25,82 @@
     padding: 0px 5px;
 }
 
+.container_images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .contact_modal__return {
-    max-width: 55px;
+    max-width: 40px;
     width: 100%;
     align-self: flex-start;
     cursor: pointer;
 }
 
-.contact_modal__container>h1 {
+.imgSun {
+    max-width: 70px;
+    width: 100%;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.title {
     color: #ffffff;
     font-family: Inknut Antiqua;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-style: normal;
-    font-weight: 400;
-    height: 70px;
+    font-weight: 500;
+    line-height: 40px;
 }
 
-.contact_modal__list {
+.list {
     width: 100%;
     height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
 }
 
-.contact_modal__item {
+.item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    height: max-content;
+    height: min-content;
     width: 100%;
+    max-width: 400px;
     justify-content: space-between;
     padding-bottom: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     text-align: center;
+    gap: 15px;
 }
 
-.contact_modal__user {
+.item>a>img {
+    width: 40px;
+    height: 40px;
+}
+
+.item>div>img {
+    width: 40px;
+    height: 40px;
+}
+
+.container>p {
+    color: #ffffff;
+    font-family: Inknut Antiqua;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: small;
+    text-align: end;
+
+    word-break: break-all;
+}
+
+.container>span {
     color: #ffffff;
     font-family: Inknut Antiqua;
     font-size: 1rem;
@@ -70,9 +108,6 @@
     font-weight: 400;
     line-height: normal;
     word-break: break-all;
-}
 
-.contact_modal__logo {
-    width: 40px;
-    height: 40px;
+    text-align: end;
 }

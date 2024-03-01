@@ -1,16 +1,25 @@
 .main {
-    height: calc(100vh - 100px);
-    width: 100vw;
-    overflow-x: hidden;
+    max-height: calc(100vh - 100px);
+    width: calc(100% - 200px);
     overflow-y: auto;
+    padding: 80px 15px 200px 15px;
+    position: absolute;
+    right: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 10px 15px 50px;
+    gap: 80px;
+
+    z-index: 2;
 }
 
-.main_title {
+@media (max-width: 700px) {
+    .main {
+        width: 100%;
+    }
+}
+
+.title {
     color: rgb(0, 0, 0);
     font-family: Inknut Antiqua;
     font-size: clamp(1.5rem, 8vw, 2.55rem);
@@ -21,7 +30,6 @@
 }
 
 .main_refer {
-    margin-top: 55px;
     color: rgb(0, 0, 0);
     font-family: Inknut Antiqua;
     font-size: clamp(1rem, 8vw, 1.5rem);
@@ -29,18 +37,12 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
+    margin: 35px 0px 400px 0px;
 }
 
-.main_refer>a {
-    text-decoration: none;
-    color: #005c89;
-}
-
-.main_contact {
-    margin-top: 35px;
-    background-color: black;
+.main_refer>a { 
     color: rgb(255, 255, 255);
-    max-width: 250px;
+    max-width: 300px;
     width: 100%;
     height: 60px;
     border-radius: 45px;
@@ -48,56 +50,61 @@
     font-size: 25px;
     font-family: Inknut Antiqua;
     line-height: 60px;
-    cursor: pointer;
+    text-decoration: none;
+    padding:  0px 20px;
 }
 
-.main_list {
-
+.list {
     list-style: none;
     width: 100%;
-    height: max-content;
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    gap: 100px;
     justify-content: space-around;
 }
 
-.main_project {
+.item {
     width: 100%;
-    max-width: 450px;
+    max-width: 800px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     justify-content: space-between;
     margin-top: 30px;
     min-height: 380px;
-    padding: 5px;
+    padding: 10px;
     height: max-content;
-    border-top: 10px groove #033249;
-    border-right: 10px groove #033249;
-    border-bottom: 10px ridge #033249;
-    border-left: 10px ridge #033249;
-    border-radius: 15px;
+    border-radius: 20px;
+    gap: 15px;
 }
 
-.main_project>img {
+@media (max-width: 460px) {
+    .item {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+    }
+}
+
+.item>img {
     max-width: 150px;
     max-height: 50px;
     width: 100%;
     border-radius: 25px;
     image-rendering: optimizeQuality;
+    align-self: flex-start;
+    margin-top: 50px;
+    left: 5px;
+    top: 0px;
+    transform: rotate(-45deg);
 }
 
-.main_project>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.main_paragraph {
+.nav_item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -106,29 +113,28 @@
     align-items: center;
 }
 
-.main_paragraph>a {
+.nav_item>a {
     font-family: Inknut Antiqua;
     font-size: 0.8rem;
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
-    color: white;
-    background-color: black;
+    background-color: white;
     max-width: 150px;
     width: 100%;
     height: 40px;
-    padding-top: 5px;
+    padding: 5px 8px;
     border-radius: 25px;
     margin-top: 20px;
 }
 
-.main_text {
+.container_data {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
-.main_text>h3 {
+.container_data>h3 {
     color: rgb(0, 0, 0);
     font-family: Inknut Antiqua;
     font-size: clamp(1rem, 10vw, 1.5rem);
@@ -136,10 +142,11 @@
     font-weight: 400;
 }
 
-.main_text>p {
+.container_data>p {
     color: rgb(0, 0, 0);
     font-family: Inknut Antiqua;
     font-size: clamp(0.8rem, 1vw, 1.5rem);
     font-style: normal;
     font-weight: 400;
+    max-width: 500px;
 }
